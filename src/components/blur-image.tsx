@@ -45,6 +45,7 @@ const BlurImage: FC<IBlurImageProps> = ({
   return (
     <Image
       {...props}
+      alt={alt || "Image"}
       src={isLoading ? "" : src}
       className={cn(
         "main-transition",

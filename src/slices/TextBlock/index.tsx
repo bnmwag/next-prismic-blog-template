@@ -51,6 +51,7 @@ const TectBlock = ({ slice }: TectBlockProps): JSX.Element => {
       {slice.primary.content.map((item) => (
         <>
           {textTypes.includes(item.type) && (
+            // @ts-ignore
             <Typography variant={type}>{item.text}</Typography>
           )}
         </>
