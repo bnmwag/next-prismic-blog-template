@@ -2,6 +2,7 @@
 
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 
 const LINKS = [
@@ -26,10 +27,10 @@ const Footer: FC = () => {
     <footer className='relative w-full pb-32'>
       <div className='mx-auto w-full container'>
         <div className='grid grid-cols-1 justify-between gap-4 md:grid-cols-2 items-start'>
-          <div className='flex items-center gap-x-2 opacity-90'>
+          <Link href={"/"} className='flex items-center gap-x-2 opacity-90'>
             <Image src={"/logo.webp"} alt='logo' width={32} height={32} />
             <span className='font-bold'>Acme</span>
-          </div>
+          </Link>
           <div className='grid grid-cols-3 justify-between gap-4'>
             {LINKS.map(({ title, items }) => (
               <ul key={title} className='space-y-4'>
